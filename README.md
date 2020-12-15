@@ -13,5 +13,4 @@ Website: website for a food Company
 **Web page type:** Single page
 **Content:** Info + Picture
 
-##################################################################################
 ## Project 2
