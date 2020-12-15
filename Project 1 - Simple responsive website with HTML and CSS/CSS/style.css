@@ -1,0 +1,517 @@
+/******************************************************
+*Basic Setup
+*******************************************************/
+*{
+	margin		: 0;
+	padding		: 0;
+	box-sizing	: border-box;
+}
+
+html{
+	background-color: #ebeced;
+	color			: #555;
+	font-family		: 'Rubik', sans-serif;
+	font-weight 	: 300;
+	font-size 		: 20px;
+	text-rendering 	: optimizeLegibility;
+}
+
+/*Clearing Floats*/
+
+.clearfix{
+	zoom: 1;
+}
+.clearfix:after{
+	content: '.';
+	clear: both;
+	display: block;
+	height: 0px;
+	width: auto;
+	visibility: hidden;
+}
+/******************************************************
+*Reusable Components
+*******************************************************/
+.row{
+	max-width	: 1140px;
+	margin		: 0 auto;
+}
+
+section{
+	padding: 80px 0;
+}
+
+/******************************************************
+*Header CSS
+*******************************************************/
+#header{
+	height				: 100vh;
+	background-size		: cover;
+	background-position	: center;
+	background-attachment: fixed;
+}
+
+.hero-text-box{
+	position	: absolute;
+	width		: 1140px;
+	top			: 50%;
+	left		: 50%;
+	transform	: translate(-50%, -50%);
+}
+/******************************************************
+*Header: Logo
+*******************************************************/
+#logo{
+	height		: 120px;
+	width		: auto;
+	float		: left;
+	padding-left: 12%;
+	margin-top	: 20px;
+}
+
+/******************************************************
+*Header: Navigation
+*******************************************************/
+.main_nav{
+	float		: right;
+	list-style	: none;
+	margin-top	: 30px;
+	margin-right: 60px;
+}
+.main_nav li{
+	display		: inline-block;
+	margin-left	: 40px;
+}
+
+.main_nav li a{
+	text-decoration	: none;
+	color			: #fff;
+	text-transform	: uppercase;
+	font-size		: 80%;
+	padding			: 2px;
+	border-bottom	: 3px solid transparent;
+	transition		: border-bottom 0.4s;
+}
+
+.main_nav li a:hover{
+	border-bottom	: 3px solid #d16c13;
+}
+
+/******************************************************
+*Headings
+*******************************************************/
+
+h1,h2,h3{	
+	font-weight		: 300;
+	text-transform	: uppercase;
+	letter-spacing	: 1px;	
+}
+
+h1{
+	margin-bottom	: 20px;
+	color			: #fff;
+	word-spacing	: 4px;
+}
+
+h2{
+	margin-bottom	: 30px;
+	font-size		: 150%;
+	word-spacing	: 2px;
+	text-align		: center;
+	font-weight		: 600;
+}
+
+h2:after{
+	display			: block;
+	margin			: 0 auto;
+	margin-top		: 30px;
+	height			: 2px;
+	width			: 100px;
+	background-color: #d16c13;
+	content			: " ";
+}
+
+h3{
+	font-weight		: 600;
+	font-size		: 100%; 
+	margin-bottom	: 15px;
+}
+
+h4{
+	font-weight		: 600;
+	font-size		: 100%; 
+	margin-bottom	: 15px;
+}
+
+/******************************************************
+*Reusable Buttons TAG
+*******************************************************/
+.bttn{
+	display			: inline-block;
+	padding			: 10px 30px;
+	font-weight		: 300;
+	text-decoration	: none;
+	border-radius	: 200px;
+	color			: #fff;
+	transition		: background-color 0.4s, border 0.4s, color 0.4s;
+}
+/******************************************************
+*Header Button
+*******************************************************/
+.bttn_full{
+	background-color: #d16c13;
+	border			: 2px solid #d16c13;
+}
+
+.bttn_full:hover{
+	background-color: #d9640b;
+	border			: 2px solid #c25f08;
+}
+
+.bttn_ghost{
+	border	: 2px solid #05C0E8;
+	color	: #05C0E8;
+}
+
+.bttn_ghost:hover{
+	border			: 2px solid #04a9cc;
+	background-color: #04a9cc;
+	color			: #fff;
+}
+/********************************************************
+*second page: icons
+********************************************************/
+.icn_features{
+	display			: block;
+	filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+	max-height		: 30%; 
+	max-width		: 20%;
+	margin-bottom	: 6%; 
+}
+
+/********************************************************
+*second page: paragraphs 
+********************************************************/
+.long_copy{
+	line-height	: 140%;
+	width		: 70%;
+	margin-left	: 15%;
+}
+
+.box{
+	padding	: 1%;
+}
+.box p{
+	font-size	: 90%;
+	line-height	: 140%;
+}
+/****************************************************
+*Third Page: Meal Pics;
+*****************************************************/
+.fvrt-food{
+	padding: 0;
+}
+.meals-pic{
+	list-style	: none;
+	width		: 100%;
+}
+.meals-pic li{
+	display	: block;
+	float	: left;
+	width	: 25%;
+}
+
+.meals-pic figure{
+	width			: 100%;
+	margin			: 0;
+	overflow		: hidden;
+	background-color: black;
+}
+
+.meals-pic img{
+	width		: 100%;
+	height		: auto;
+	margin		: 0;
+	opacity		: 85%;
+	/*Animaion*/
+	transform	: scale(1.15);
+	transition	: transform 0.5s, opacity 0.5s;
+}
+
+.meals-pic img:hover{
+	/*Animaion*/
+	opacity		: 100%;
+	transform	: scale(1.05);
+}
+/****************************************************
+*fourth Page: How to order;
+*****************************************************/
+
+.how-to-order {
+	background-color: #e6e8eb;
+}
+
+.steps-box:first-child {
+	padding-right: 4%;
+	text-align: right;
+}
+
+.steps-box:second-child {
+	padding-left: 4%;
+	text-align: left;
+}
+
+#app-screen{
+	width: 50%;
+	height: auto;
+}
+
+.works-steps{
+	margin-bottom: 30px; 
+}
+
+.works-steps div{
+	color			: #d16c13;
+	border			: 3px solid #d16c13;
+	border-radius	: 50%;
+	display			: inline-block;
+	height			: 52px;
+	width			: 52px;
+	text-align		: center;
+	
+	padding			: 5px;
+	float			: left;
+	font-size		: 150%;
+	
+	margin-right	:25px; 
+}
+.works-steps p{
+	padding-top	: .5%;
+}
+
+.bttn_app img{
+	height		: 50px;
+	width		: auto;
+	margin-right: 12px;
+	margin-top	: 80px;
+}
+
+.bttn_app img:hover{
+	opacity	: 90%;
+}
+
+/****************************************************
+*location:page;
+*****************************************************/
+.icn_locations_page{
+	display			: inline-block;
+	filter			: invert(27%) sepia(51%) saturate(2400%) hue-rotate(346deg) brightness(104%) contrast(97%);
+	max-height		: 8%; 
+	max-width		: 8%;
+	margin-bottom	: 2px;
+	vertical-align	: middle; 
+}
+
+.city-pic{
+	width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+}
+
+.location-inner-elms{
+	margin-top: 5px;margin-bottom: 5px;
+}
+.location-inner-elms p,img{
+	display: inline-block;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
+.twit-link{
+	color: #c25f08;
+	text-decoration: none;
+	transition: color .4s;
+}
+
+.twit-link:hover{
+	color: #04a9cc;
+}
+/****************************************************************************
+*customer-testimonial
+*****************************************************************************/
+.customer-testimonial{
+	background-size: cover;
+	background-attachment: fixed;
+	color: white;
+}
+.quote-sign{
+	filter: invert(94%) sepia(2%) saturate(4771%) hue-rotate(182deg) brightness(114%) contrast(84%);
+	width: 16%;
+	height: 16%;
+	padding: 2%;
+	margin-bottom: 10px;
+}
+blockquote{
+	padding: 3%;
+	line-height: 150%;
+}
+
+cite{
+	font-size: 85%;
+	margin-top: 25px;
+	display: block;
+}
+cite img{
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 20px;
+	vertical-align: middle;
+}
+/********************************************************
+*SIgn-up page
+********************************************************/
+.sign-up-section{
+	background-color: #e6e8eb;
+}
+.plans-box{
+	background-color: white;
+	border-radius: 4%;
+	padding: 3%;
+	width: 90%;
+	margin-left: 5%;
+	box-shadow: 0 6px 7px #c9c9c7;
+}
+.plans-box div{
+	border-bottom: solid 1px #e8e8e8; 
+	padding: 2%;
+}
+.plans-box li{
+	list-style: none;
+	margin-bottom: 5px;
+	margin-left: 3px;
+	margin-right: 0;
+}
+.plans-box ul li img{
+	vertical-align: middle;
+}
+
+.plan-price{
+	font-size: 250%;
+	margin-bottom: 10px;
+	color: #d16c13;
+}
+.plan-price span{
+	font-size: 40%;
+	display: inline-block;
+}
+
+.plan-price-per-meal{
+	font-size: 75%;
+}
+.plans-box div:first-child{
+	background-color: #f5f5f5;
+	border-radius: 3%;
+}
+.plans-box div:last-child{
+	text-align: center;
+}
+
+/****************************************************
+*contact-form;
+*****************************************************/
+
+.contact-form{
+	width: 60%;
+	margin: 0 auto;
+	font-size: 90%;
+	background-color: #e0e0e0;
+	padding: 2%;
+}
+
+.contact-form input[type=text],
+input[type=email],
+select, textarea{
+	width: 100%;
+	padding: 2%;
+	border-radius: 3%;
+	border: 1px solid #ccc;
+}
+
+.contact-form textarea{
+	height: 100px;
+	resize: none;
+}
+
+.contact-form input[type=checkbox]{
+	height: 16px;
+	width: 16px;
+	margin: 10px 10px 10px 0;
+	vertical-align: middle;
+}
+
+*:focus{
+	outline: none;
+}
+
+/****************************************************
+*footer
+*****************************************************/
+footer{
+	background-color: #3b3d3b; 
+}
+
+.footer-nav{
+	list-style: none;
+	float: left;
+	font-size: 90%;
+	padding: 0 3%;
+}
+.footer-nav li{
+	display: inline-block;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.footer-nav-links{
+	color: #d1d1d1;
+	text-decoration: none;
+	display: inline;
+	transition: color .3s;
+}
+.footer-nav-links:hover{
+	color: #f58522;
+}
+
+.social-links{
+	list-style: none;
+	margin-left: 70%;
+	margin-right: 0;
+	margin-top: 5px;
+}
+.social-links li{
+	display: inline;
+	margin-right: 10px;
+}
+.social-links li:last-child{
+	margin-right: 0px;
+}
+.social-bttn{
+	display			: inline-block;
+	filter			: invert(91%) sepia(19%) saturate(0%) hue-rotate(69deg) brightness(90%) contrast(95%);
+	max-height		: 22px; 
+	max-width		: 22px;
+	margin-bottom	: 2px;
+	vertical-align	: middle; 
+	transition: filter .3s;
+}
+
+.social-bttn:hover{
+	filter	: invert(43%) sepia(87%) saturate(751%) hue-rotate(151deg) brightness(100%) contrast(97%);
+}
+
+.copyright{
+	margin-top		: 15px;
+	margin-bottom	: 50px;
+	font-size		: 70%;
+	color			: #d1d1d1;
+	text-align		: center;
+}

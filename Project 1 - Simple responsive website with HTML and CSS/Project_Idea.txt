@@ -1,0 +1,13 @@
+OMNIFOOD is a website of a food company
+
+Goal: 
+	Show: How it works, location, what it does
+	Sign up: Email List of customers for subscription plan
+
+Audience: Busy people who dont' have time to cook
+
+WebPAge: Single page
+Content: Info + Picture
+Naviagaion: at .docx folder
+
+
