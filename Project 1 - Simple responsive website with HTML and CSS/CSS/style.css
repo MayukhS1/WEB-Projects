@@ -63,11 +63,13 @@ section {
 /******************************************************
 *Header: Logo
 *******************************************************/
-#logo {
-  height: 120px;
-  width: auto;
+.logo {
+  height: 80px;
+  width: 80px;
   float: left;
-  padding-left: 12%;
+  margin-top: 25px;
+}
+#logo{
   margin-top: 20px;
 }
 
@@ -75,10 +77,12 @@ section {
 *Header: Navigation
 *******************************************************/
 .main_nav {
+  display: inline-block;
   float: right;
   list-style: none;
   margin-top: 30px;
   margin-right: 60px;
+  margin-bottom: 10px;
 }
 
 .main_nav li {
@@ -199,7 +203,11 @@ h4 {
 .long_copy {
   line-height: 140%;
   width: 70%;
-  margin-left: 15%;
+  margin-bottom: 50px;
+  padding-bottom: 3%;
+  text-align:center;
+  vertical-align: middle;
+  display: table-cell;
 }
 
 .box {

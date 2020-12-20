@@ -3,9 +3,12 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" type="text/css" href="CSS/style.css">
   <link rel="stylesheet" type="text/css" href="CSS/normalize.css">
   <link rel="stylesheet" type="text/css" href="CSS/grid.css">
+  <link rel="stylesheet" type="text/css" href="CSS/queries.css">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,600;0,700;0,900;1,300&display=swap" rel="stylesheet">
@@ -17,8 +20,8 @@
   <!--Header Part-->
   <header id="header" style="background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(resource/hero.jpg);">
     <nav>
-      <div>
-        <img src="resource/logo-white.png" alt="Omnifood_Logo" id="logo">
+      <div class="row">
+        <img src="resource/logo-white.png" alt="Omnifood_Logo" id="logo" class="col logo">
 
         <ul class="main_nav">
           <li><a href="#">Food delivery</a></li>
@@ -27,11 +30,14 @@
           <li><a href="#">Sign in</a></li>
         </ul>
       </div>
+
     </nav>
     <div class="hero-text-box">
       <h1 style="margin-top: 0;font-size: 250%;">Goodbye junk food<br>Hello super healthy meals</h1>
-      <a href="#" class="bttn bttn_full">I'm Hungry</a> &nbsp;
-      <a href="#" class="bttn bttn_ghost">Show me more</a>
+      <div class="row main-buttons">
+        <a href="#" class="bttn bttn_full">I'm Hungry</a> &nbsp;
+        <a href="#" class="bttn bttn_ghost main_ghost_bttn">Show me more</a>
+      </div>
     </div>
   </header>
   <!-- /header Ends-->
@@ -40,7 +46,7 @@
   <section class="features">
     <div class="row">
       <h2>Get food fast — not fast food</h2>
-      <p class="long_copy" style="margin-bottom: 35px;">Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!
+      <p class="long_copy">Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!
       </p>
     </div>
     <div class="row">
