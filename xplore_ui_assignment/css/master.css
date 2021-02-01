@@ -1,0 +1,70 @@
+/***************Main setup***************/
+.main_body {
+  width: 70%;
+  background-color:  #012333;/*#ededed;*/
+  margin: 0 auto;
+  font-family: Arial;
+}
+
+.center {
+  text-align: center;
+  margin: 25px auto;
+}
+
+/*Headings*/
+.headings {
+  color: #039455;
+  font-size: 60px;
+}
+
+
+/*Buttons*/
+
+.page_bttn {
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 2px;
+  color: #fff;
+  transition: background-color 0.4s, border 0.4s, color 0.4s;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.bttn_full {
+  background-color: #05AB92;
+  border: 2px solid #05AB92;
+}
+
+.bttn_full:hover {
+  background-color: #058DA1;
+  border: 2px solid #058DA1;
+}
+
+/*******Form******/
+.form{
+  background-color: #6adeac;
+  border: 1px solid #058DA1;
+  width: 60%;
+  height: 120%;
+  padding: 5px;
+}
+
+.form_values{
+  display: inline;
+}
+
+.inputs input {
+  width: 60%;
+  padding: 2%;
+  border-radius: 3%;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.titles{
+  margin-top: 5px;
+  font-weight: bold;
+
+}
