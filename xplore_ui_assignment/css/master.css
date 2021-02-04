@@ -43,28 +43,32 @@
 }
 
 /*******Form******/
-.form{
-  background-color: #6adeac;
-  border: 1px solid #058DA1;
-  width: 60%;
-  height: 120%;
-  padding: 5px;
+.form_body{
+  width: 75%;
+  text-align: left;
+  margin: 25px auto;
+  box-sizing: border-box;
+}
+.form_lebel{
+  color: white;
+  margin-left: 3px;
 }
 
-.form_values{
-  display: inline;
-}
-
-.inputs input {
-  width: 60%;
-  padding: 2%;
-  border-radius: 3%;
-  border: 1px solid #ccc;
+.form_field{
   margin: 10px 0;
+
 }
 
-.titles{
-  margin-top: 5px;
-  font-weight: bold;
+.form_field input[type="text"],
+input[type="password"],
+input[type="date"]{
+  box-sizing: border-box;
+  width: 70%;
+  margin: 6px 2px;
+  height: 33px;
+}
 
+.form_field input[type="radio"]{
+  margin-top: 8px;
+  margin-bottom: 8px;
 }

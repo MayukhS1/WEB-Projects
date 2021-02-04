@@ -6,23 +6,32 @@
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body class="main_body">
-    <form class="form center" action="welcome.html" method="post" id="my_form">
-      <div class="form_values">
-        <div class="titles">
-          <label for="">Enter Name</label>
-        </div>
-        <div class="inputs">
-          <input type="text" name="" value="" placeholder="Enter name">
-        </div>
+    <form class="form_body" action="welcome.html" method="post" id="my_form">
+      <h3 class="headings">Enter Details</h3>
+      <div class="form_name form_field">
+          <label for="first_name" class="form_lebel">Enter Name</label><br>
+          <input type="text" id="first_name" name="first_name" value="" placeholder="First Name" required><br>
+          <input type="text" name="middle_name" value="" placeholder="Middle Name"><br>
+          <input type="text" name="last_name" value="" placeholder="Last Name" required>
       </div>
-      <div class="form_values">
-        <div class="titles">
-          <label for="">Enter id</label>
-        </div>
-        <div class="inputs">
-          <input type="text" name="" value="" placeholder="Enter id">
-        </div>
+
+      <div class="form_field" >
+          <label for="reg_no" class="form_lebel">Enter Registration Number</label><br>
+          <input type="text" id="reg_no" name="reg_no" value="" placeholder="Registration Number" required>
       </div>
+
+      <div class="radio_field form_field">
+          <label for="gender" class="form_lebel" required>Select Gender</label><br>
+          <input type="radio" name="gender" value="male" id="male"><label for="male"  class="form_lebel">Male</label>
+          <input type="radio" name="gender" value="female" id="female"><label for="female" class="form_lebel">Female</label>
+          <input type="radio" name="gender" value="other" id="other"><label for="other" class="form_lebel">Other</label>
+      </div>
+
+      <div class="form_field">
+          <label for="dob" class="form_lebel">Date of Birth</label><br>
+          <input type="date" name="dob" id="dob" value="" required>
+      </div>
+
       <button type="submit" name="button" class="page_bttn bttn_full">Add</button>
     </form>
   </body>
