@@ -1,0 +1,209 @@
+/*Global
+------------------------------------*/
+body {
+  color: #181518;
+  /*almost-black*/
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 55px;
+}
+
+h2 {
+  font-family: 'Pacifico', cursive;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+a {
+  color: #2E8BC0;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+img {
+  max-width: 175px;
+  width: 75%;
+}
+
+.content-wrap {
+  max-width: 850px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+/*color pallet
+Baby Blue
+#B1D4E0
+
+Blue
+#2E8BC0
+
+Dark Blue
+#0C2D48
+
+Midnight Blue
+#145DA0
+--------------------------------*/
+/*Profile
+------------------------------------*/
+header {
+  background-color: #0C2D48;
+  color: #ECEBEB;
+  text-align: center;
+}
+
+header a {
+  color: #F3FFA7;
+}
+
+/*Projects
+------------------------------------*/
+.project-section {
+  background-color: #EBEBEB;
+}
+
+.projects {
+  background-color: #B1D4E0;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.button-links {
+  background-color: #0C2D48;
+  padding: 8px;
+  border-radius: 5px;
+  color: #DEF3FF;
+  display: inline-block;
+  transition: background-color .4s, color .4s;
+}
+
+.button-links:hover {
+  background-color: #104169;
+  color: #B0E2FF;
+}
+
+/*Work-experince
+------------------------------------*/
+.work-exp {
+  background-color: #145DA0;
+  color: #ECEBEB;
+}
+
+.work-exp a {
+  color: #F3FFA7;
+}
+
+.jobs h3 {
+  margin-top: 13px;
+}
+
+/*Education
+------------------------------------*/
+.education {
+  background-color: #EBEBEB;
+}
+
+.education-details p {
+  margin: 0;
+}
+
+.education-details h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+/*Contact-details
+------------------------------------*/
+footer {
+  background-color: #0C2D48;
+  color: #ECEBEB;
+  text-align: center;
+}
+
+footer a {
+  color: #F3FFA7;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-list a {
+  padding: 15px;
+  display: inline-block;
+}
+
+/*media queries
+---------------------------------------------*/
+@media screen and (min-width: 750px) {
+  .projects img {
+    max-width: 175px;
+    float: left;
+    margin-right: 15px;
+    padding: 8px 0;
+  }
+
+  .jobs {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 25px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .jobs {
+    margin-bottom: 30px;
+  }
+
+  header, footer {
+    text-align: left;
+  }
+
+  .contact-list {
+    float: left;
+    display: grid;
+  }
+
+  .contact-list a {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  #lynda-btn{
+    margin-top: 5px;
+  }
+}
