@@ -7,22 +7,30 @@
 </head>
 
 <body>
-  <h2 id="h">Open Web Console</h2>
+  <h2 class="headings">Open Web Console</h2>
+
+  <div class="">
+    <input type="button" name="" value="Hello World" onclick="hello()" class="buttons">
+    <input type="button" name="" value="Working with Variable" onclick="variables()" class="buttons">
+    <input type="button" name="" value="Fibonoci" onclick="fibonoci()" class="buttons">
+    <input type="button" name="" value="Working with Array" onclick="array_methods()" class="buttons">
+    <input type="button" name="" value="Working with function return" onclick="function_test()" class="buttons">
+
+  </div>
+
+  <h3 class="headings" id="h">output</h3>
   <script src="basic1.js"></script>
-  <input type="button" name="" value="Program 1" onclick="hello()" class="buttons">
-  <input type="button" name="" value="Program 2" onclick="variables()" class="buttons">
-  <input type="button" name="" value="Program 3" onclick="fibonoci()" class="buttons">
-  
-
-
 
   <style media="screen">
     .buttons{
       height: 40px;
-      width: 80px;
-      margin-right: 25px;
-      margin-left: 10px;
       background-color: #76e7bf;
+      padding: 5px;
+    }
+
+    body{
+      margin: 0 auto;
+      text-align: center;
     }
   </style>
 </body>
