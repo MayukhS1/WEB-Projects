@@ -43,7 +43,7 @@ function Custom_object(name,semester,roll,isStudent,isMember) {
   this.isStudent = isStudent;
   this.isMember = isMember;
   this.updateStatus = function () {
-    if (this.isMember&& !this.isStudent) {
+    if (this.isMember && !this.isStudent) {
       this.isMember = false;
     }
     return this.isMember;
