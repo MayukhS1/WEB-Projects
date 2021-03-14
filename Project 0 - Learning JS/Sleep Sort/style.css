@@ -1,0 +1,27 @@
+.input-box{
+  display: flex;
+  justify-content: center;
+  align-items: middle;
+
+  margin-top: 25px;
+}
+
+.output-box {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.input-box input[type="text"]{
+  margin-right: 5px;
+  height: 2pc;
+  width: 12pc;
+}
+
+.input-box button {
+  width: 5pc;
+  background-color: #31C7BC;
+}
+
+.input-box button:hover{
+  background-color: #29AAA0;
+}
