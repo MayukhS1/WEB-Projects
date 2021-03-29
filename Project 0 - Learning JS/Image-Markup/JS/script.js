@@ -19,7 +19,7 @@ function generateImageSize(elementSource) {
     return markup.join();
 }
 
-for (let index = 0; index < IMAGES.length; index++) {
+for (let index = 0; index < IMAGES.length; index++){
     let element = IMAGES[index].getAttribute("src");
     let type = IMAGES[index].getAttribute("data-type");
 
