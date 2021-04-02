@@ -27,14 +27,14 @@ let secPosition = sec * 6;
 function runClock() {
   //WindowOrWorkerGlobalScope.setInterval() method
   //https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
-  secPosition = secPosition+6; // updating the sec hand
-  minPosition = (minPosition+ (6/60))
-  hrPosition = hrPosition+(3/360);
+  secPosition = secPosition + 6; // updating the sec hand
+  minPosition = (minPosition + (6 / 60));
+  hrPosition = hrPosition + (3 / 360);
 
   //put values in css
   HOURHAND.style.transform = "rotate(" + hrPosition + "deg)";
   MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
   SECONDHAND.style.transform = "rotate(" + secPosition + "deg)";
 }
-  //WindowOrWorkerGlobalScope.setInterval() method
+//WindowOrWorkerGlobalScope.setInterval() method
 var interval = setInterval(runClock, 1000);

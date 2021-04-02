@@ -19,14 +19,13 @@ function generateImageSize(elementSource) {
     return markup.join();
 }
 
-for (let index = 0; index < IMAGES.length; index++){
+for (let index = 1; index < IMAGES.length; index++){
     let element = IMAGES[index].getAttribute("src");
     let type = IMAGES[index].getAttribute("data-type");
 
     element = element.slice(0,-8);
     // console.log(element);
     // console.log(type);
-
     let sourceSet = generateImageSize(element);
     console.log(sourceSet);
     IMAGES[index].setAttribute("srcset", sourceSet);
@@ -35,5 +34,3 @@ for (let index = 0; index < IMAGES.length; index++){
     console.log(sizes);
     IMAGES[index].setAttribute("sizes",sizes);    
 }
-
-

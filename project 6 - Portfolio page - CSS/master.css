@@ -188,7 +188,8 @@ footer a {
     margin-bottom: 30px;
   }
 
-  header, footer {
+  header,
+  footer {
     text-align: left;
   }
 
@@ -203,7 +204,7 @@ footer a {
 }
 
 @media (max-width: 450px) {
-  #lynda-btn{
+  #lynda-btn {
     margin-top: 5px;
   }
 }
