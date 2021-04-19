@@ -41,7 +41,7 @@ function DayList(props){
 function App() {
   return (
     <div className="App">
-      <img src={img1} height={300} alt="PC image"/>
+      <img src={img1} height={300} alt="PC image" data-testid="img"/>
       <Header name="Working"/>
       <DayList listType="Working" days={workDays}/>
       <Header name="Off"/>
