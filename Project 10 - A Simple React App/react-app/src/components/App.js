@@ -3,7 +3,7 @@ import '../css/App.css';
 import AddAppointments from './AddAppointments';
 import SearchAppointments from './SearchAppointments';
 import ListAppointments from './ListAppointments';
-import {without} from 'lodash';
+import {findIndex, without} from 'lodash';
 
 
 class App extends Component{
@@ -15,12 +15,16 @@ class App extends Component{
       formDisplay: false,
       orderBy: 'petName',
       orderDir: 'asc',
+      queryText: '',
       lastIndex: 0
     };
     this.deleteAppointment = this.deleteAppointment.bind(this); 
     //without binding it to this this.setState in deleteAppointment will not work!
     this.toggleForm = this.toggleForm.bind(this);
     this.addAppointment = this.addAppointment.bind(this);
+    this.changeOrder = this.changeOrder.bind(this);
+    this.setQueryText = this.setQueryText.bind(this);
+    this.updateInfo = this.updateInfo.bind(this);
   }
   
 
@@ -51,6 +55,31 @@ class App extends Component{
     })
   }
 
+  updateInfo(name, value, id){
+    let tempApts = this.state.myApponitments;
+    let aptIndex = findIndex(this.state.myApponitments,{
+      aptId:id
+    });
+
+    tempApts[aptIndex][name] =value;
+    this.setState({
+      myApponitments: tempApts
+    });
+  }
+
+  changeOrder(order, dir){
+    this.setState({
+      orderBy: order,
+      orderDir: dir
+    });
+  }
+
+  setQueryText(text){
+    this.setState({
+      queryText: text
+    });
+  }
+
   componentDidMount(){
     fetch('./data.json')
       .then(response => response.json())
@@ -79,12 +108,27 @@ class App extends Component{
       order = -1;
     }
 
-    filteredApts.sort((a,b) => {
+    filteredApts = filteredApts.sort((a,b) => {
       if(a[this.state.orderBy].toLowerCase()<b[this.state.orderBy].toLowerCase()){
         return -1 * order;
       }
       return 1*order;
-    });
+    }).filter(eachItem => {
+        return(
+          eachItem['petName']
+          .toLowerCase()
+          .includes(this.state.queryText.toLowerCase()) ||
+          eachItem['ownerName']
+          .toLowerCase()
+          .includes(this.state.queryText.toLowerCase()) ||
+          eachItem['aptDate']
+          .toLowerCase()
+          .includes(this.state.queryText.toLowerCase()) ||
+          eachItem['aptNotes']
+          .toLowerCase()
+          .includes(this.state.queryText.toLowerCase())
+        );
+    } );
 
     return (
       <main className="page bg-white" id="petratings">
@@ -98,9 +142,15 @@ class App extends Component{
                     addAppointment={this.addAppointment}/> 
                     {/* this addAppointment={this.addAppointment} will call a local method to deal
                     with the prop*/}
-                  <SearchAppointments/>
+                  <SearchAppointments
+                    orderBy = {this.state.orderBy}
+                    orderDir = {this.state.orderDir}
+                    changeOrder = {this.changeOrder}
+                    setQueryText = {this.setQueryText}
+                  />
                   <ListAppointments appointments={filteredApts}
-                    deleteAppointment={this.deleteAppointment}/>
+                    deleteAppointment={this.deleteAppointment}
+                    updateInfo={this.updateInfo}/>
                 </div>
               </div>
             </div>
