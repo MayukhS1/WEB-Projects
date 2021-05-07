@@ -34,3 +34,5 @@ app.post ('/api/articles/:name/upvote', (req, res) =>{
 app.listen(8000, () => console.log('Listening to port 8000'));
 
 // run ther server by : npx babel-node src/server.js
+
+// run using nodemon : npx nodemon --exec npx babel-node src/server.js
