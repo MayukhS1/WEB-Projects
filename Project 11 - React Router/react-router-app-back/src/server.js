@@ -1,7 +1,7 @@
 import express, { response } from 'express';
 import bodyParser from 'body-parser';
 import {MongoClient} from 'mongodb';
-
+import path from 'path';
 
 // fake database for now
 
@@ -23,6 +23,8 @@ import {MongoClient} from 'mongodb';
 
 const app = express();
 
+
+app.use(express.static(path.join(__dirname, '/build')));
 app.use(bodyParser.json());
 
 // app.get('/hello',(req, res) => res.send('Hello from the other side'));
@@ -83,6 +85,10 @@ app.post('/api/articles/:name/add-comment', async (req, res) => {
         res.status(200).json(updatedArticleInfo);
     }, res);
 });
+
+app.get('*', (req, res)=>{
+    res.sendFile(path.join(__dirname + '/build/index.html'));
+})
 
 app.listen(8000, () => console.log('Listening to port 8000'));
 
