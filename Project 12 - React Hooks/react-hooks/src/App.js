@@ -9,8 +9,10 @@ import React from 'react';
 // import MouseContainer from './Components/MouseContainer';
 // import IntervalCounter from './Components/IntervalCounter';
 // import DataFetching from './Components/DataFetching';
-
-
+// import ContextHookOne from './Components/ContextHookOne';
+// import ReducerHookOne from './Components/ReducerHookOne';
+// import ReducerHookCount2 from './Components/ReducerHookCount2';
+import MultiReducerHook from './Components/MultiReducerHook';
 
 function App() {
   return (
@@ -24,8 +26,10 @@ function App() {
       {/* <MouseContainer/> */}
       {/* <IntervalCounter/> */}
       {/* <DataFetching/> */}
-
-      
+      {/* <ContextHookOne/> */}
+      {/* <ReducerHookOne/>
+      <ReducerHookCount2/> */}
+      <MultiReducerHook/>
     </div>
   );
 }
