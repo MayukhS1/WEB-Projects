@@ -12,7 +12,12 @@ import React from 'react';
 // import ContextHookOne from './Components/ContextHookOne';
 // import ReducerHookOne from './Components/ReducerHookOne';
 // import ReducerHookCount2 from './Components/ReducerHookCount2';
-import MultiReducerHook from './Components/MultiReducerHook';
+// import MultiReducerHook from './Components/MultiReducerHook';
+// import ReducerWithContext from './Components/ReducerWithContext';
+import DataFetchWithReducer from './Components/DataFetchWithReducer';
+
+
+
 
 function App() {
   return (
@@ -29,7 +34,14 @@ function App() {
       {/* <ContextHookOne/> */}
       {/* <ReducerHookOne/>
       <ReducerHookCount2/> */}
-      <MultiReducerHook/>
+      {/* <MultiReducerHook/> */}
+
+      {/* <ReducerWithContext/> */}
+      
+      <DataFetchWithReducer/>
+
+
+
     </div>
   );
 }
