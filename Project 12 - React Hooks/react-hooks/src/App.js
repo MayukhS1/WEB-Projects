@@ -14,10 +14,10 @@ import React from 'react';
 // import ReducerHookCount2 from './Components/ReducerHookCount2';
 // import MultiReducerHook from './Components/MultiReducerHook';
 // import ReducerWithContext from './Components/ReducerWithContext';
-import DataFetchWithReducer from './Components/DataFetchWithReducer';
-
-
-
+// import DataFetchWithReducer from './Components/DataFetchWithReducer';
+// import CallBackHook from './Components/CallBackHook';
+// import CountMemoHook from './Components/CountMemoHook';
+import UseRefHook from './Components/ChildComponents/UseRefHook';
 
 function App() {
   return (
@@ -38,10 +38,11 @@ function App() {
 
       {/* <ReducerWithContext/> */}
       
-      <DataFetchWithReducer/>
+      {/* <DataFetchWithReducer/> */}
+      {/* <CallBackHook/> */}
 
-
-
+      {/* <CountMemoHook/> */}
+      <UseRefHook/>
     </div>
   );
 }
